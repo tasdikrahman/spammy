@@ -2,9 +2,9 @@
 # @Author: Tasdik Rahman
 # @Date:   2016-04-12 10:09:44
 # @Last Modified by:   Tasdik Rahman
-# @Last Modified time: 2016-04-12 16:39:52
+# @Last Modified time: 2016-04-12 23:07:34
 # @GPLv3 License
 # @http://tasdikrahman.me
 # @https://github.com/prodicus
 
-VERSION = '1.0.2'
+VERSION = '1.0.3'

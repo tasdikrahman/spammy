@@ -7,7 +7,7 @@ spammy
     :alt:
 
 :Author: `Tasdik Rahman <http://tasdikrahman.me>`__
-:Latest version: 1.0.2
+:Latest version: 1.0.3
 
 .. contents::
     :backlinks: none
@@ -34,6 +34,28 @@ Example
 -------
 `[back to top] <#overview>`__
 
+- Your data directory structure should be something similar to
+
+.. code:: bash
+
+    $ tree /home/tasdik/Dropbox/projects/spammy/examples/test_dataset
+    /home/tasdik/Dropbox/projects/spammy/examples/test_dataset
+    ├── ham
+    │   ├── 5458.2001-04-25.kaminski.ham.txt
+    │   ├── 5459.2001-04-25.kaminski.ham.txt
+    │   ...
+    │   ...
+    │   └── 5851.2001-05-22.kaminski.ham.txt
+    └── spam
+        ├── 4136.2005-07-05.SA_and_HP.spam.txt
+        ├── 4137.2005-07-05.SA_and_HP.spam.txt
+        ...
+        ...
+        └── 5269.2005-07-19.SA_and_HP.spam.txt
+
+
+**Example**
+
 .. code:: python
 
     >>> import os
@@ -44,8 +66,8 @@ Example
     >>> # directory structure
     >>> os.listdir(directory)
     ['spam', 'Summary.txt', 'ham']
-    >>> os.listdir(os.path.join(directory, 'spam'))[:5]
-    ['4257.2005-04-06.BG.spam.txt', '0724.2004-09-21.BG.spam.txt', '2835.2005-01-19.BG.spam.txt', '2505.2005-01-03.BG.spam.txt', '3992.2005-03-19.BG.spam.txt']
+    >>> os.listdir(os.path.join(directory, 'spam'))[:3]
+    ['4257.2005-04-06.BG.spam.txt', '0724.2004-09-21.BG.spam.txt', '2835.2005-01-19.BG.spam.txt']
     >>>
     >>> # Spammy object created
     >>> cl = Spammy(directory, limit=100)
@@ -89,13 +111,17 @@ Example
     >>> directory = '/home/tasdik/Dropbox/projects/spammy/examples/training_dataset'
     >>> cl = Spammy(directory, limit=300)  # training on only 300 spam and ham files
     >>> cl.train()
-    >>> cl.accuracy(directory='/home/tasdik/Dropbox/projects/spammy/examples/test_dataset', label='spam', limit=300)
+    >>> data_dir = '/home/tasdik/Dropbox/projects/spammy/examples/test_dataset'
+    >>>
+    >>> cl.accuracy(directory=data_dir, label='spam', limit=300)
     0.9554794520547946
-    >>> cl.accuracy(directory='/home/tasdik/Dropbox/projects/spammy/examples/test_dataset', label='ham', limit=300)
+    >>> cl.accuracy(directory=data_dir, label='ham', limit=300)
     0.9033333333333333
     >>> 
 
-**NOTE**: More examples can be found over in the `examples directory <https://github.com/prodicus/spammy/tree/master/examples>`__
+**NOTE**: 
+
+- More examples can be found over in the `examples directory <https://github.com/prodicus/spammy/tree/master/examples>`__
 
 Installation
 ------------
