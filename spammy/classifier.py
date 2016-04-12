@@ -2,7 +2,7 @@
 # @Author: Tasdik Rahman
 # @Date:   2016-03-12
 # @Last Modified by:   Tasdik Rahman
-# @Last Modified time: 2016-04-12 16:01:11
+# @Last Modified time: 2016-04-12 17:10:25
 # @MIT License
 # @http://tasdikrahman.me
 # @https://github.com/prodicus
@@ -29,8 +29,6 @@ References
 from __future__ import division, print_function
 from collections import defaultdict
 import math
-
-from tabulate import tabulate
 
 class NaiveBayesClassifier(object):
 
@@ -61,13 +59,13 @@ class NaiveBayesClassifier(object):
 
         .. note::
 
-        `defaultdict` is used bacause when we try to acces a key which is not
-        there in the `dictionary`, we get a `KeyError`. Whereas in
-        `defaultdict`.It will try to return a default value if the key is not
-        found.
+            `defaultdict` is used bacause when we try to acces a key which is not
+            there in the `dictionary`, we get a `KeyError`. Whereas in
+            `defaultdict`.It will try to return a default value if the key is not
+            found.
 
-        For more on `defaultdict`,
-        Refer: http://stackoverflow.com/a/5900634/3834059
+            For more on `defaultdict`,
+            Refer: http://stackoverflow.com/a/5900634/3834059
 
         :param self: class object
         :param featurelist: the list of the features
@@ -90,17 +88,16 @@ class NaiveBayesClassifier(object):
         This function calculates the probability of a feature to belong to a
         particular label. (i.e class of 'spam' or 'ham' for us.)
 
-        TO-DO
-        =====
-        
-        for an unseen featurem I can assign a random probability, let's say
-        0.5
+        .. note:: 
+
+            for an unseen featurem I can assign a random probability, let's say 0.5
 
         :param self: class object
         :param feature: The feature for which we will be calculating the
                         probailty.
         :param label: spam or ham
         :returns: The probability of the feature being in the label.
+        :rtype: float
         """
         # nothing but a ternary operator
         # returns spam, label == "ham" and the other way around
@@ -140,6 +137,7 @@ class NaiveBayesClassifier(object):
         :param label: Label whose probability needs to be classified
         :returns: the probability of the document in being in a particular
                   class
+        :rtype: float/int
         """
 
         if not self.total:
@@ -168,14 +166,10 @@ class NaiveBayesClassifier(object):
         Writing the actual interface for the class here. Thi will classify our
         documents when called from the terminal
 
-        .. note:: TO-DO
-        >>> NaiveBayesClassifier.classify(<document_to_be_classified>)
-        <returns the class of the Document>
-        >>>
-
         :param self: class object
         :param features: The feaures of the document passed
-        :returns: The classification result!. *phew*
+        :returns: spam or ham **phew**
+        :rtype: str
         """
 
         probability = {}
@@ -193,25 +187,12 @@ class NaiveBayesClassifier(object):
         else:
             return "Bad day bruh! No classification done! Come next time."
 
-    # for testing puposes
-    def print_classification(self):
-        """
-        Prints classification object which stores a score for labels
-
-        :param self: class object
-        """
-        list_of_lists = [list(elem) for elem in self.classification.items()]
-        print(tabulate(
-            list_of_lists,
-            headers=['Label', 'Score'],
-            tablefmt='orgtbl'
-        ))
-
     def __str__(self):
         """
         Overriding the default `__str__` function for better readability
 
         :param self: class object
+        :returns: The spammy object with __str__ method overridden for verbosity
         """
         return "No of Features : {feature}, \nNumber of spam email : {spam}, \nNumber of ham email : {ham}, \nTotal number of emails:  {total}".format(
             feature=len(self.feature_count),

@@ -2,7 +2,7 @@
 # @Author: tasdik
 # @Date:   2016-04-11 18:52:17
 # @Last Modified by:   Tasdik Rahman
-# @Last Modified time: 2016-04-12 16:00:39
+# @Last Modified time: 2016-04-12 17:07:33
 # @GPLv3 License
 # @http://tasdikrahman.me
 # @https://github.com/prodicus
@@ -33,17 +33,27 @@ class Spammy(object):
 
         :param directory: Pass the full path of the directory where your
                           training data is 
-        Example: ::
-
-            Example: /home/tasdik/foo/bar/data
-            $ tree data -L 2
-            data
-            ├── ham
-            └── spam
         :param spam: folder spam inside the 'directory'
         :param ham: folder ham inside the 'directory'
         :param limit: limit the number of files for the classifier to be
                       trained upon when training the classifier                      
+
+        :Example:
+
+            >>> import os
+            >>> from spammy import Spammy
+            >>>
+            >>> directory = '/home/tasdik/Dropbox/projects/spamfilter/data/corpus3'
+            >>>
+            >>> # directory structure
+            >>> os.listdir(directory)
+            ['spam', 'Summary.txt', 'ham']
+            >>> os.listdir(os.path.join(directory, 'spam'))[:5]
+            ['4257.2005-04-06.BG.spam.txt', '0724.2004-09-21.BG.spam.txt', '2835.2005-01-19.BG.spam.txt', '2505.2005-01-03.BG.spam.txt', '3992.2005-03-19.BG.spam.txt']
+            >>>
+            >>> # Spammy object created
+            >>> cl = Spammy(directory, limit=100)
+            
         """
         if kwargs:
             spam = kwargs['spam']
@@ -80,10 +90,15 @@ class Spammy(object):
         """
         Trains the classifier object
 
-        .. usage::
+        :param self: the classifier object
 
-            >>> obj = Spammy(path_to_dir, spam, ham, limit)
-            >>> obj.train()
+        :Example:
+
+            >>> from spammy import Spammy
+            >>> directory = '/home/tasdik/Dropbox/projects/spammy/examples/training_dataset'
+            >>> cl = Spammy(directory, limit=300)  # training on only 300 spam and ham files
+            >>> cl.train()
+
         """
         kwargs = {
             "directory": self.directory,
@@ -101,25 +116,28 @@ class Spammy(object):
         tries classifying text into spam or ham
 
         :param email_text: email_text to be passed here which is to be classified
-        :rtypes: returns spam or ham
+        :returns: Either ham or spam
+        :rtype: str
 
-        .. usage:: 
+        .. note :: To be run after you have trained the classifier object on your dataset
 
-            >>> # To be run after you have trained the classifier object on your dataset
+        :Example:
+
+            >>> from spammy import Spammy
+            >>> cl = Spammy(path_to_trainin_data, limit=200)
+            # 200 or the number of files you need to train the classifier upon
+            >>>  
             >>> HAM_TEXT = \
             '''
-            Bro. Hope you are fine.
-
-            Hows the work going on ? Can you send me some updates on it.
-
+            Bro. Hope you are fine. Hows the work going on ? Can you send me some updates on it.
             And are you free tomorrow ?
-
             No problem man. But please make sure you are finishing it 
             by friday night and sending me on on that day itself. As we 
             have to get it printed on Saturday.
             '''
             >>> cl.classify(HAM_TEXT)
             'ham'
+
         """
         email_text = bs4.UnicodeDammit.detwingle(email_text).decode('utf-8')
         email_text = email_text.encode('ascii', 'ignore')
@@ -136,11 +154,21 @@ class Spammy(object):
         :param limit: number of files the classifier should test upon
         :param label: the label as in spam or ham
         :param directory: The absolute path of the directory to be tested
-        :rtypes: returns the accuracy in fractions
+        :returns: the precision of the classifier. Eg: 0.87
+        :rtype: float
 
-        Example: ::
+        :Example:
 
-            >>> Spammy_obj.accuracy('ham', path_to_test_corpus)
+            >>> from spammy import Spammy
+            >>> directory = '/home/tasdik/Dropbox/projects/spammy/examples/training_dataset'
+            >>> cl = Spammy(directory, limit=300)  # training on only 300 spam and ham files
+            >>> cl.train()
+            >>> cl.accuracy(directory='/home/tasdik/Dropbox/projects/spammy/examples/test_dataset', label='spam', limit=300)
+            0.9554794520547946
+            >>> cl.accuracy(directory='/home/tasdik/Dropbox/projects/spammy/examples/test_dataset', label='ham', limit=300)
+            0.9033333333333333
+            >>>
+
         """
         directory = kwargs['directory']
         label = kwargs['label']

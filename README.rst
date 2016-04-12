@@ -105,7 +105,7 @@ Installation
 
 .. code:: bash
 
-    $ pip install nltk==3.2.1, beautifulsoup4==4.4.1, tabulate==0.7.5, nose==1.3.7
+    $ pip install nltk==3.2.1, beautifulsoup4==4.4.1
 
 
 To install use pip:

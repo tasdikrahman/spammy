@@ -2,7 +2,7 @@
 # @Author: Tasdik Rahman
 # @Date:   2016-03-12
 # @Last Modified by:   Tasdik Rahman
-# @Last Modified time: 2016-04-12 16:02:24
+# @Last Modified time: 2016-04-12 16:54:10
 # @MIT License
 # @http://tasdikrahman.me
 # @https://github.com/prodicus
@@ -117,6 +117,8 @@ class Trainer(object):
 
         .. note:: 
 
+            So these are some possible features which would make an email a SPAM
+
             features looked for
             - Attachments
             - Links in text
@@ -124,11 +126,11 @@ class Trainer(object):
             - Numbers
             - Words in text
 
-        So these are some possible features which would make an email a SPAM
 
         :param self: Trainer object
         :param text: Email text from which we will extract features
         :returns: A list which contains the feature set
+        :rtype: list
         """
         features = []
         tokens = text.split()
