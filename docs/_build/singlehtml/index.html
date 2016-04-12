@@ -1,0 +1,701 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>spammy documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="None" href="index.html#document-index" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html#document-index">spammy  documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="spammy">
+<h1>1&nbsp;&nbsp;&nbsp;spammy<a class="headerlink" href="#spammy" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://pypi.python.org/pypi/spammy"><img alt="PyPI version" src="https://img.shields.io/pypi/v/spammy.svg" /></a> <a class="reference external" href="https://travis-ci.org/prodicus/spammy"><img alt="Build Status" src="https://travis-ci.org/prodicus/spammy.svg?branch=master" /></a> <a class="reference external" href="https://www.codacy.com/app/tasdik95/spammy"><img alt="percentagecov" src="https://api.codacy.com/project/badge/coverage/e2cb32eae16242f795f498d40d0d8984" /></a> <a class="reference external" href="https://requires.io/github/prodicus/spammy/requirements/?branch=master"><img alt="Requirements Status" src="https://requires.io/github/prodicus/spammy/requirements.svg?branch=master" /></a> <a class="reference external" href="https://pypi.python.org/pypi/spammys"><img alt="License" src="https://img.shields.io/pypi/l/spammy.svg" /></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Author:</th><td class="field-body"><a class="reference external" href="http://tasdikrahman.me">Tasdik Rahman</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Latest version:</th><td class="field-body">1.0.0</td>
+</tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#spammy" id="id3">1&nbsp;&nbsp;&nbsp;spammy</a><ul class="auto-toc">
+<li><a class="reference internal" href="#overview" id="id4">1.1&nbsp;&nbsp;&nbsp;Overview</a></li>
+<li><a class="reference internal" href="#features" id="id5">1.2&nbsp;&nbsp;&nbsp;Features</a></li>
+<li><a class="reference internal" href="#example" id="id6">1.3&nbsp;&nbsp;&nbsp;Example</a></li>
+<li><a class="reference internal" href="#installation" id="id7">1.4&nbsp;&nbsp;&nbsp;Installation</a><ul class="auto-toc">
+<li><a class="reference internal" href="#upgrading" id="id8">1.4.1&nbsp;&nbsp;&nbsp;Upgrading</a></li>
+<li><a class="reference internal" href="#installation-behind-a-proxy" id="id9">1.4.2&nbsp;&nbsp;&nbsp;Installation behind a proxy</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#benchmarks" id="id10">1.5&nbsp;&nbsp;&nbsp;Benchmarks</a></li>
+<li><a class="reference internal" href="#contributing" id="id11">1.6&nbsp;&nbsp;&nbsp;Contributing</a><ul class="auto-toc">
+<li><a class="reference internal" href="#roadmap" id="id12">1.6.1&nbsp;&nbsp;&nbsp;Roadmap</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#licensing" id="id13">1.7&nbsp;&nbsp;&nbsp;Licensing</a></li>
+<li><a class="reference internal" href="#credits" id="id14">1.8&nbsp;&nbsp;&nbsp;Credits</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#documentation" id="id15">2&nbsp;&nbsp;&nbsp;Documentation</a></li>
+<li><a class="reference internal" href="#indices-and-tables" id="id16">3&nbsp;&nbsp;&nbsp;Indices and tables</a></li>
+</ul>
+</div>
+<div class="section" id="overview">
+<h2>1.1&nbsp;&nbsp;&nbsp;Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/prodicus/spammy">spammy</a> : Spam filtering at your service</p>
+</div>
+<div class="section" id="features">
+<h2>1.2&nbsp;&nbsp;&nbsp;Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>train the classifier on your own dataset to classify your emails into spam or ham</li>
+<li>Dead simple to use. See <a class="reference external" href="#example">usage</a></li>
+<li>Blazingly fast once the classifier is trained. (See <a class="reference external" href="#benchmarks">benchmarks</a>)</li>
+<li>Custom exceptions raised so that when you miss something, spammy tells you where did you go wrong in a graceful way</li>
+<li>Written in uncomplicated <tt class="docutils literal"><span class="pre">python</span></tt></li>
+<li>Built on top of the giant shoulders of <a class="reference external" href="http://nltk.org">nltk</a></li>
+</ul>
+</div>
+<div class="section" id="example">
+<h2>1.3&nbsp;&nbsp;&nbsp;Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#overview">[back to top]</a></p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">spammy</span> <span class="kn">import</span> <span class="n">Spammy</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">directory</span> <span class="o">=</span> <span class="s">&#39;/home/tasdik/Dropbox/projects/spamfilter/data/corpus3&#39;</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># directory structure</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">directory</span><span class="p">)</span>
+<span class="go">[&#39;spam&#39;, &#39;Summary.txt&#39;, &#39;ham&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="s">&#39;spam&#39;</span><span class="p">))[:</span><span class="mi">5</span><span class="p">]</span>
+<span class="go">[&#39;4257.2005-04-06.BG.spam.txt&#39;, &#39;0724.2004-09-21.BG.spam.txt&#39;, &#39;2835.2005-01-19.BG.spam.txt&#39;, &#39;2505.2005-01-03.BG.spam.txt&#39;, &#39;3992.2005-03-19.BG.spam.txt&#39;]</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># Spammy object created</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cl</span> <span class="o">=</span> <span class="n">Spammy</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cl</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">SPAM_TEXT</span> <span class="o">=</span> \
+<span class="gp">... </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="gp">... </span><span class="sd">My Dear Friend,</span>
+<span class="gp">...</span><span class="sd"></span>
+<span class="gp">... </span><span class="sd">How are you and your family? I hope you all are fine.</span>
+<span class="gp">...</span><span class="sd"></span>
+<span class="gp">... </span><span class="sd">My dear I know that this mail will come to you as a surprise, but it&#39;s for my</span>
+<span class="gp">... </span><span class="sd">urgent need for a foreign partner that made me to contact you for your sincere</span>
+<span class="gp">... </span><span class="sd">genuine assistance My name is Mr.Herman Hirdiramani, I am a banker by</span>
+<span class="gp">... </span><span class="sd">profession currently holding the post of Director Auditing Department in</span>
+<span class="gp">... </span><span class="sd">the Islamic Development Bank(IsDB)here in Ouagadougou, Burkina Faso.</span>
+<span class="gp">...</span><span class="sd"></span>
+<span class="gp">... </span><span class="sd">I got your email information through the Burkina&#39;s Chamber of Commerce</span>
+<span class="gp">... </span><span class="sd">and industry on foreign business relations here in Ouagadougou Burkina Faso</span>
+<span class="gp">... </span><span class="sd">I haven&#39;disclose this deal to any body I hope that you will not expose or</span>
+<span class="gp">... </span><span class="sd">betray this trust and confident that I am about to repose on you for the</span>
+<span class="gp">... </span><span class="sd">mutual benefit of our both families.</span>
+<span class="gp">...</span><span class="sd"></span>
+<span class="gp">... </span><span class="sd">I need your urgent assistance in transferring the sum of Eight Million,</span>
+<span class="gp">... </span><span class="sd">Four Hundred and Fifty Thousand United States Dollars ($8,450,000:00) into</span>
+<span class="gp">... </span><span class="sd">your account within 14 working banking days This money has been dormant for</span>
+<span class="gp">... </span><span class="sd">years in our bank without claim due to the owner of this fund died along with</span>
+<span class="gp">... </span><span class="sd">his entire family and his supposed next of kin in an underground train crash</span>
+<span class="gp">... </span><span class="sd">since years ago. For your further informations please visit</span>
+<span class="gp">... </span><span class="sd">(http://news.bbc.co.uk/2/hi/5141542.stm)</span>
+<span class="gp">... </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cl</span><span class="o">.</span><span class="n">classify</span><span class="p">(</span><span class="n">SPAM_TEXT</span><span class="p">)</span>
+<span class="go">&#39;spam&#39;</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<p><strong>Accuracy of the classifier</strong></p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">spammy</span> <span class="kn">import</span> <span class="n">Spammy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">directory</span> <span class="o">=</span> <span class="s">&#39;/home/tasdik/Dropbox/projects/spammy/examples/training_dataset&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cl</span> <span class="o">=</span> <span class="n">Spammy</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>  <span class="c"># training on only 300 spam and ham files</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cl</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cl</span><span class="o">.</span><span class="n">accuracy</span><span class="p">(</span><span class="n">directory</span><span class="o">=</span><span class="s">&#39;/home/tasdik/Dropbox/projects/spammy/examples/test_dataset&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;spam&#39;</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="go">0.9554794520547946</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cl</span><span class="o">.</span><span class="n">accuracy</span><span class="p">(</span><span class="n">directory</span><span class="o">=</span><span class="s">&#39;/home/tasdik/Dropbox/projects/spammy/examples/test_dataset&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;ham&#39;</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="go">0.9033333333333333</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>More examples can be found over in the <a class="reference external" href="https://github.com/prodicus/spammy/tree/master/examples">examples directory</a> **</p>
+</div>
+<div class="section" id="installation">
+<h2>1.4&nbsp;&nbsp;&nbsp;Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#overview">[back to top]</a></p>
+<div class="figure">
+<img alt="" src="http://hd.wallpaperswide.com/thumbs/shut_up_and_take_my_money-t2.jpg" />
+</div>
+<p><strong>Install the dependencies first</strong></p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ pip install nltk==3.2.1, beautifulsoup4==4.4.1
+</pre></div>
+</div>
+<p>To install use pip:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ pip install spammy
+</pre></div>
+</div>
+<p>or use easy_install</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ easy_install spammy
+</pre></div>
+</div>
+<p>Or build it yourself (only if you must):</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ git clone https://github.com/prodicus/spammy.git
+$ python setup.py install
+</pre></div>
+</div>
+<div class="section" id="upgrading">
+<h3>1.4.1&nbsp;&nbsp;&nbsp;Upgrading<a class="headerlink" href="#upgrading" title="Permalink to this headline">¶</a></h3>
+<p>To upgrade the package,</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ pip install -U spammy
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation-behind-a-proxy">
+<h3>1.4.2&nbsp;&nbsp;&nbsp;Installation behind a proxy<a class="headerlink" href="#installation-behind-a-proxy" title="Permalink to this headline">¶</a></h3>
+<p>If you are behind a proxy, then this should work</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ pip --proxy [username:password@]domain_name:port install spammy
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="benchmarks">
+<h2>1.5&nbsp;&nbsp;&nbsp;Benchmarks<a class="headerlink" href="#benchmarks" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#overview">[back to top]</a></p>
+<p>Spammy is blazingly fast once trained</p>
+<p>Don&#8217;t believe me? Have a look</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">timeit</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">spammy</span> <span class="kn">import</span> <span class="n">Spammy</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">directory</span> <span class="o">=</span> <span class="s">&#39;/home/tasdik/Dropbox/projects/spamfilter/data/corpus3&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cl</span> <span class="o">=</span> <span class="n">Spammy</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cl</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">SPAM_TEXT_2</span> <span class="o">=</span> \
+<span class="gp">... </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="gp">... </span><span class="sd">INTERNATIONAL MONETARY FUND (IMF)</span>
+<span class="gp">... </span><span class="sd">DEPT: WORLD DEBT RECONCILIATION AGENCIES.</span>
+<span class="gp">... </span><span class="sd">ADVISE: YOUR OUTSTANDING PAYMENT NOTIFICATION</span>
+<span class="gp">...</span><span class="sd"></span>
+<span class="gp">... </span><span class="sd">Attention</span>
+<span class="gp">... </span><span class="sd">A power of attorney was forwarded to our office this morning by two gentle men,</span>
+<span class="gp">... </span><span class="sd">one of them is an American national and he is MR DAVID DEANE by name while the</span>
+<span class="gp">... </span><span class="sd">other person is MR... JACK MORGAN by name a CANADIAN national.</span>
+<span class="gp">... </span><span class="sd">This gentleman claimed to be your representative, and this power of attorney</span>
+<span class="gp">... </span><span class="sd">stated that you are dead; they brought an account to replace your information</span>
+<span class="gp">... </span><span class="sd">in other to claim your fund of (US$9.7M) which is now lying DORMANT and UNCLAIMED,</span>
+<span class="gp">... </span><span class="sd"> below is the new account they have submitted:</span>
+<span class="gp">... </span><span class="sd">                    BANK.-HSBC CANADA</span>
+<span class="gp">... </span><span class="sd">                    Vancouver, CANADA</span>
+<span class="gp">... </span><span class="sd">                    ACCOUNT NO. 2984-0008-66</span>
+<span class="gp">...</span><span class="sd"></span>
+<span class="gp">... </span><span class="sd">Be further informed that this power of attorney also stated that you suffered.</span>
+<span class="gp">... </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">classify_timeit</span><span class="p">():</span>
+<span class="gp">... </span>   <span class="n">result</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">classify</span><span class="p">(</span><span class="n">SPAM_TEXT_2</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">timeit</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">classify_timeit</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">[0.1810469627380371, 0.16121697425842285, 0.16121196746826172]</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="contributing">
+<h2>1.6&nbsp;&nbsp;&nbsp;Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#overview">[back to top]</a></p>
+<p>Refer <a class="reference external" href="https://github.com/prodicus/spammy/tree/master/CONTRIBUTING.rst">CONTRIBUTING</a> page for details</p>
+<div class="section" id="roadmap">
+<h3>1.6.1&nbsp;&nbsp;&nbsp;Roadmap<a class="headerlink" href="#roadmap" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Include more algorithms for increased accuracy</li>
+</ul>
+</div>
+</div>
+<div class="section" id="licensing">
+<h2>1.7&nbsp;&nbsp;&nbsp;Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#overview">[back to top]</a></p>
+<p>Spammy is built by <a class="reference external" href="http://tasdikrahman.me">Tasdik Rahman</a> and licensed under GPLv3.</p>
+<blockquote>
+<div><p>spammy
+Copyright (C) 2016  Tasdik Rahman(<a class="reference external" href="mailto:prodicus&#37;&#52;&#48;outlook&#46;com">prodicus<span>&#64;</span>outlook<span>&#46;</span>com</a>)</p>
+<p>This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License
+along with this program.  If not, see &lt;<a class="reference external" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</p>
+</div></blockquote>
+<p>You can find a full copy of the LICENSE file <a class="reference external" href="https://github.com/prodicus/spammy/tree/master/LICENSE.txt">here</a></p>
+</div>
+<div class="section" id="credits">
+<h2>1.8&nbsp;&nbsp;&nbsp;Credits<a class="headerlink" href="#credits" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#overview">[back to top]</a></p>
+<p>If you&#8217;d like give me credit somewhere on your blog or tweet a shout out to <a class="reference external" href="https://twitter.com/tasdikrahman">&#64;tasdikrahman</a>, well hey, I&#8217;ll take it.</p>
+</div>
+</div>
+<div class="section" id="documentation">
+<h1>2&nbsp;&nbsp;&nbsp;Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<span id="document-spammy"></span><div class="section" id="spammy-package">
+<h2>spammy package<a class="headerlink" href="#spammy-package" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="submodules">
+<h3>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="module-spammy.classifier">
+<span id="spammy-classifier-module"></span><h3>spammy.classifier module<a class="headerlink" href="#module-spammy.classifier" title="Permalink to this headline">¶</a></h3>
+<p>Rolling my own Implementation of Naive Bayes algorithm.</p>
+<p>This particular implementation caters to the case when a category is not
+observed in the dataset, and the model automatically assigns a 0 probability
+to it!</p>
+<p>Read about smoothening techniques somewhere but let&#8217;s not delve into that now.</p>
+<div class="section" id="references">
+<h4>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>[1] </dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://stackoverflow.com/a/5029989/3834059">http://stackoverflow.com/a/5029989/3834059</a></li>
+<li><a class="reference external" href="http://stackoverflow.com/q/8419401/3834059">http://stackoverflow.com/q/8419401/3834059</a></li>
+<li><a class="reference external" href="http://stackoverflow.com/q/2600790/3834059">http://stackoverflow.com/q/2600790/3834059</a></li>
+</ul>
+</dd>
+</dl>
+<dl class="class">
+<dt id="spammy.classifier.NaiveBayesClassifier">
+<em class="property">class </em><tt class="descclassname">spammy.classifier.</tt><tt class="descname">NaiveBayesClassifier</tt><a class="reference internal" href="_modules/spammy/classifier.html#NaiveBayesClassifier"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spammy.classifier.NaiveBayesClassifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>Inherits from the &#8216;object&#8217; class. Nothing special</p>
+<dl class="method">
+<dt id="spammy.classifier.NaiveBayesClassifier.classify">
+<tt class="descname">classify</tt><big>(</big><em>features</em><big>)</big><a class="reference internal" href="_modules/spammy/classifier.html#NaiveBayesClassifier.classify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spammy.classifier.NaiveBayesClassifier.classify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writing the actual interface for the class here. Thi will classify our
+documents when called from the terminal</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>self</strong> &#8211; class object</li>
+<li><strong>features</strong> &#8211; The feaures of the document passed</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">spam or ham <strong>phew</strong></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="spammy.classifier.NaiveBayesClassifier.document_probability">
+<tt class="descname">document_probability</tt><big>(</big><em>features</em>, <em>label</em><big>)</big><a class="reference internal" href="_modules/spammy/classifier.html#NaiveBayesClassifier.document_probability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spammy.classifier.NaiveBayesClassifier.document_probability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds <cite>document_probability()</cite> by looping over the documents and
+calling <cite>feature_probability()</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>self</strong> &#8211; class object</li>
+<li><strong>features</strong> &#8211; List of features</li>
+<li><strong>label</strong> &#8211; Label whose probability needs to be classified</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">the probability of the document in being in a particular
+class</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float/int</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="spammy.classifier.NaiveBayesClassifier.feature_probability">
+<tt class="descname">feature_probability</tt><big>(</big><em>feature</em>, <em>label</em><big>)</big><a class="reference internal" href="_modules/spammy/classifier.html#NaiveBayesClassifier.feature_probability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spammy.classifier.NaiveBayesClassifier.feature_probability" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function calculates the probability of a feature to belong to a
+particular label. (i.e class of &#8216;spam&#8217; or &#8216;ham&#8217; for us.)</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">for an unseen featurem I can assign a random probability, let&#8217;s say 0.5</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>self</strong> &#8211; class object</li>
+<li><strong>feature</strong> &#8211; The feature for which we will be calculating the
+probailty.</li>
+<li><strong>label</strong> &#8211; spam or ham</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The probability of the feature being in the label.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="spammy.classifier.NaiveBayesClassifier.train">
+<tt class="descname">train</tt><big>(</big><em>featurelist</em>, <em>label</em><big>)</big><a class="reference internal" href="_modules/spammy/classifier.html#NaiveBayesClassifier.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spammy.classifier.NaiveBayesClassifier.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trains the classifier for gods sake!</p>
+<p>Trying to emulate the API which the NLTK wrapper tries to provide for
+its nltk.NaiveBayesClassifier.train() gives</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><cite>defaultdict</cite> is used bacause when we try to acces a key which is not
+there in the <cite>dictionary</cite>, we get a <cite>KeyError</cite>. Whereas in
+<cite>defaultdict</cite>.It will try to return a default value if the key is not
+found.</p>
+<p class="last">For more on <cite>defaultdict</cite>,
+Refer: <a class="reference external" href="http://stackoverflow.com/a/5900634/3834059">http://stackoverflow.com/a/5900634/3834059</a></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>self</strong> &#8211; class object</li>
+<li><strong>featurelist</strong> &#8211; the list of the features</li>
+<li><strong>label</strong> &#8211; class of the feature</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-spammy.exceptions">
+<span id="spammy-exceptions-module"></span><h3>spammy.exceptions module<a class="headerlink" href="#module-spammy.exceptions" title="Permalink to this headline">¶</a></h3>
+<dl class="exception">
+<dt id="spammy.exceptions.CorpusFileError">
+<em class="property">exception </em><tt class="descclassname">spammy.exceptions.</tt><tt class="descname">CorpusFileError</tt><a class="reference internal" href="_modules/spammy/exceptions.html#CorpusFileError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spammy.exceptions.CorpusFileError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#spammy.exceptions.SpammyError" title="spammy.exceptions.SpammyError"><tt class="xref py py-class docutils literal"><span class="pre">spammy.exceptions.SpammyError</span></tt></a></p>
+<p>Raised when the one of the corpus files passed to the spammy ctor do not
+exist</p>
+<p>OR</p>
+<p>When we do not pass any file to the ctor for initialization</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="spammy.exceptions.LimitError">
+<em class="property">exception </em><tt class="descclassname">spammy.exceptions.</tt><tt class="descname">LimitError</tt><a class="reference internal" href="_modules/spammy/exceptions.html#LimitError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spammy.exceptions.LimitError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#spammy.exceptions.SpammyError" title="spammy.exceptions.SpammyError"><tt class="xref py py-class docutils literal"><span class="pre">spammy.exceptions.SpammyError</span></tt></a></p>
+<p>raised when the limit passed is either less than 0</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="spammy.exceptions.SpammyError">
+<em class="property">exception </em><tt class="descclassname">spammy.exceptions.</tt><tt class="descname">SpammyError</tt><a class="reference internal" href="_modules/spammy/exceptions.html#SpammyError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spammy.exceptions.SpammyError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></tt></p>
+<p>A Spammy related error</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="spammy.exceptions.SpammyException">
+<tt class="descclassname">spammy.exceptions.</tt><tt class="descname">SpammyException</tt><a class="headerlink" href="#spammy.exceptions.SpammyException" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="index.html#spammy.exceptions.SpammyError" title="spammy.exceptions.SpammyError"><tt class="xref py py-class docutils literal"><span class="pre">SpammyError</span></tt></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-spammy.train">
+<span id="spammy-train-module"></span><h3>spammy.train module<a class="headerlink" href="#module-spammy.train" title="Permalink to this headline">¶</a></h3>
+<p>Trainer class for the classifier</p>
+<dl class="class">
+<dt id="spammy.train.Trainer">
+<em class="property">class </em><tt class="descclassname">spammy.train.</tt><tt class="descname">Trainer</tt><big>(</big><em>directory</em>, <em>spam</em>, <em>ham</em>, <em>limit</em><big>)</big><a class="reference internal" href="_modules/spammy/train.html#Trainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spammy.train.Trainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>The trainer class</p>
+<dl class="method">
+<dt id="spammy.train.Trainer.extract_features">
+<tt class="descname">extract_features</tt><big>(</big><em>text</em><big>)</big><a class="reference internal" href="_modules/spammy/train.html#Trainer.extract_features"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spammy.train.Trainer.extract_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Will convert the document into tokens and extract the features.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>So these are some possible features which would make an email a SPAM</p>
+<p class="last">features looked for
+- Attachments
+- Links in text
+- CAPSLOCK words
+- Numbers
+- Words in text</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>self</strong> &#8211; Trainer object</li>
+<li><strong>text</strong> &#8211; Email text from which we will extract features</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A list which contains the feature set</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="spammy.train.Trainer.train">
+<tt class="descname">train</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/spammy/train.html#Trainer.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spammy.train.Trainer.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the training process on the directories passed by the user</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>self</strong> &#8211; Trainer object</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="spammy.train.Trainer.train_classifier">
+<tt class="descname">train_classifier</tt><big>(</big><em>path</em>, <em>label</em><big>)</big><a class="reference internal" href="_modules/spammy/train.html#Trainer.train_classifier"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spammy.train.Trainer.train_classifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function doing the actual classification here.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>self</strong> &#8211; Trainer object</li>
+<li><strong>path</strong> &#8211; The path of the data directory</li>
+<li><strong>label</strong> &#8211; The label underwhich the data directory is</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-spammy.version">
+<span id="spammy-version-module"></span><h3>spammy.version module<a class="headerlink" href="#module-spammy.version" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="module-spammy">
+<span id="module-contents"></span><h3>Module contents<a class="headerlink" href="#module-spammy" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="spammy.Spammy">
+<em class="property">class </em><tt class="descclassname">spammy.</tt><tt class="descname">Spammy</tt><big>(</big><em>directory=None</em>, <em>limit=None</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="_modules/spammy.html#Spammy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spammy.Spammy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>Stiches everything from train module and classifier module together</p>
+<dl class="method">
+<dt id="spammy.Spammy.accuracy">
+<tt class="descname">accuracy</tt><big>(</big><em>**kwargs</em><big>)</big><a class="reference internal" href="_modules/spammy.html#Spammy.accuracy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spammy.Spammy.accuracy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks the accuracy of the classifier by running it against a testing
+corpus</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>limit</strong> &#8211; number of files the classifier should test upon</li>
+<li><strong>label</strong> &#8211; the label as in spam or ham</li>
+<li><strong>directory</strong> &#8211; The absolute path of the directory to be tested</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">the precision of the classifier. Eg: 0.87</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"><div class="first last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">spammy</span> <span class="kn">import</span> <span class="n">Spammy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">directory</span> <span class="o">=</span> <span class="s">&#39;/home/tasdik/Dropbox/projects/spammy/examples/training_dataset&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cl</span> <span class="o">=</span> <span class="n">Spammy</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>  <span class="c"># training on only 300 spam and ham files</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cl</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cl</span><span class="o">.</span><span class="n">accuracy</span><span class="p">(</span><span class="n">directory</span><span class="o">=</span><span class="s">&#39;/home/tasdik/Dropbox/projects/spammy/examples/test_dataset&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;spam&#39;</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="go">0.9554794520547946</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cl</span><span class="o">.</span><span class="n">accuracy</span><span class="p">(</span><span class="n">directory</span><span class="o">=</span><span class="s">&#39;/home/tasdik/Dropbox/projects/spammy/examples/test_dataset&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;ham&#39;</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="go">0.9033333333333333</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="spammy.Spammy.classify">
+<tt class="descname">classify</tt><big>(</big><em>email_text</em><big>)</big><a class="reference internal" href="_modules/spammy.html#Spammy.classify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spammy.Spammy.classify" title="Permalink to this definition">¶</a></dt>
+<dd><p>tries classifying text into spam or ham</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>email_text</strong> &#8211; email_text to be passed here which is to be classified</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Either ham or spam</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To be run after you have trained the classifier object on your dataset</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Example:</th><td class="field-body"><div class="first last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">spammy</span> <span class="kn">import</span> <span class="n">Spammy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cl</span> <span class="o">=</span> <span class="n">Spammy</span><span class="p">(</span><span class="n">path_to_trainin_data</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="go"># 200 or the number of files you need to train the classifier upon</span>
+<span class="gp">&gt;&gt;&gt; </span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HAM_TEXT</span> <span class="o">=</span>             <span class="s">&#39;&#39;&#39;</span>
+<span class="go">Bro. Hope you are fine. Hows the work going on ? Can you send me some updates on it.</span>
+<span class="go">And are you free tomorrow ?</span>
+<span class="go">No problem man. But please make sure you are finishing it </span>
+<span class="go">by friday night and sending me on on that day itself. As we </span>
+<span class="go">have to get it printed on Saturday.</span>
+<span class="go">&#39;&#39;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cl</span><span class="o">.</span><span class="n">classify</span><span class="p">(</span><span class="n">HAM_TEXT</span><span class="p">)</span>
+<span class="go">&#39;ham&#39;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="spammy.Spammy.train">
+<tt class="descname">train</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/spammy.html#Spammy.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spammy.Spammy.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trains the classifier object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>self</strong> &#8211; the classifier object</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"><div class="first last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">spammy</span> <span class="kn">import</span> <span class="n">Spammy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">directory</span> <span class="o">=</span> <span class="s">&#39;/home/tasdik/Dropbox/projects/spammy/examples/training_dataset&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cl</span> <span class="o">=</span> <span class="n">Spammy</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>  <span class="c"># training on only 300 spam and ham files</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cl</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>3&nbsp;&nbsp;&nbsp;Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html#document-index">Table Of Contents</a></h3>
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-spammy">spammy package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#module-spammy.classifier">spammy.classifier module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#module-spammy.exceptions">spammy.exceptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#module-spammy.train">spammy.train module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#module-spammy.version">spammy.version module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#module-spammy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html#document-index">spammy  documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2016, Tasdik Rahman (@tasdikrahman).
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>
