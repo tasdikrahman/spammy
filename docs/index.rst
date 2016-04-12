@@ -1,21 +1,21 @@
 .. spammy documentation master file, created by
-   sphinx-quickstart on Tue Apr 12 18:05:50 2016.
+   sphinx-quickstart on Tue Apr 12 19:17:46 2016.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-
-spammy
-======
-
 |Pypi version| |Build Status| |percentagecov| |Requirements Status| |License| 
-
-:Author: `Tasdik Rahman <http://tasdikrahman.me>`__
-:Latest version: 1.0.0
 
 .. contents::
     :backlinks: none
 
 .. sectnum::
+
+spammy
+======
+
+:Author: `Tasdik Rahman <http://tasdikrahman.me>`__
+:Latest version: 1.0.0
+
 
 
 Overview
@@ -259,7 +259,7 @@ Documentation
 .. toctree::
    :maxdepth: 4
 
-   spammy
+   api_reference
 
 
 Indices and tables

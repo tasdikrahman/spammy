@@ -1,10 +1,13 @@
 spammy
 ======
 
-|Pypi version| |Build Status| |percentagecov| |Requirements Status| |License| 
+|Pypi version| |Build Status| |Python Versions| |percentagecov| |Requirements Status| |License| 
+
+.. figure:: http://i.imgur.com/L8moQ2U.jpg
+    :alt:
 
 :Author: `Tasdik Rahman <http://tasdikrahman.me>`__
-:Latest version: 1.0.0
+:Latest version: 1.0.2
 
 .. contents::
     :backlinks: none
@@ -92,7 +95,7 @@ Example
     0.9033333333333333
     >>> 
 
-**More examples can be found over in the `examples directory <https://github.com/prodicus/spammy/tree/master/examples>`__ **
+**NOTE**: More examples can be found over in the `examples directory <https://github.com/prodicus/spammy/tree/master/examples>`__
 
 Installation
 ------------
@@ -100,6 +103,8 @@ Installation
 
 .. figure:: http://hd.wallpaperswide.com/thumbs/shut_up_and_take_my_money-t2.jpg
     :alt:
+
+**NOTE**: Currently supports only ``python2``
 
 **Install the dependencies first**
 
@@ -201,6 +206,7 @@ Roadmap
 ~~~~~~~
 
 - Include more algorithms for increased accuracy
+- python3 support
 
 Licensing
 ---------
@@ -238,7 +244,9 @@ If you'd like give me credit somewhere on your blog or tweet a shout out to `@ta
 .. |Build Status| image:: https://travis-ci.org/prodicus/spammy.svg?branch=master
     :target: https://travis-ci.org/prodicus/spammy
 .. |License| image:: https://img.shields.io/pypi/l/spammy.svg
-   :target: https://pypi.python.org/pypi/spammys
+   :target: https://pypi.python.org/pypi/spammy
+.. |Python Versions| image:: https://img.shields.io/pypi/pyversions/spammy.svg
+    :target: https://pypi.python.org/pypi/spammy
 .. |grade| image:: https://api.codacy.com/project/badge/grade/c61c09b6c4ca4580b1f24c03ce3ad8e2
     :target: https://www.codacy.com/app/tasdik95/spammy
 .. |percentagecov| image:: https://api.codacy.com/project/badge/coverage/e2cb32eae16242f795f498d40d0d8984
