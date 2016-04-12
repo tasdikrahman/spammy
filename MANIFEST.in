@@ -1,0 +1,4 @@
+include README.md
+include requirements.txt
+include LICENSE.txt
+recursive-include examples *.py 
