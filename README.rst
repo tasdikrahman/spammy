@@ -23,6 +23,7 @@ Features
 - train the classifier on your own dataset to classify your emails into spam or ham
 - Dead simple to use. See `usage <#example>`__
 - Blazingly fast once the classifier is trained. (See `benchmarks <#benchmarks>`__)
+- Custom exceptions raised so that when you miss something, spammy tells you where did you go wrong in a graceful way
 - Written in uncomplicated ``python``
 - Built on top of the giant shoulders of `nltk <http://nltk.org>`__
 
@@ -99,6 +100,13 @@ Installation
 
 .. figure:: http://hd.wallpaperswide.com/thumbs/shut_up_and_take_my_money-t2.jpg
     :alt:
+
+**Install the dependencies first**
+
+.. code:: bash
+
+    $ pip install nltk==3.2.1, beautifulsoup4==4.4.1, tabulate==0.7.5, nose==1.3.7
+
 
 To install use pip:
 

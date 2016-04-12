@@ -2,7 +2,7 @@
 # @Author: tasdik
 # @Date:   2016-04-11 18:52:17
 # @Last Modified by:   Tasdik Rahman
-# @Last Modified time: 2016-04-12 10:11:46
+# @Last Modified time: 2016-04-12 16:00:39
 # @GPLv3 License
 # @http://tasdikrahman.me
 # @https://github.com/prodicus
@@ -102,6 +102,24 @@ class Spammy(object):
 
         :param email_text: email_text to be passed here which is to be classified
         :rtypes: returns spam or ham
+
+        .. usage:: 
+
+            >>> # To be run after you have trained the classifier object on your dataset
+            >>> HAM_TEXT = \
+            '''
+            Bro. Hope you are fine.
+
+            Hows the work going on ? Can you send me some updates on it.
+
+            And are you free tomorrow ?
+
+            No problem man. But please make sure you are finishing it 
+            by friday night and sending me on on that day itself. As we 
+            have to get it printed on Saturday.
+            '''
+            >>> cl.classify(HAM_TEXT)
+            'ham'
         """
         email_text = bs4.UnicodeDammit.detwingle(email_text).decode('utf-8')
         email_text = email_text.encode('ascii', 'ignore')

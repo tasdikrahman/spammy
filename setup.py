@@ -32,7 +32,7 @@ setup(
       'Programming Language :: Python :: 3',
     ],
     keywords='spam filtering, spam, ham, machine learning, artificial intelligence',
-    packages=find_packages(exclude=['docs', 'tests*']),
+    packages=find_packages(exclude=['docs', 'tests*', 'examples']),
     include_package_data=True,
     author='Tasdik Rahman',
     install_requires=install_requires,

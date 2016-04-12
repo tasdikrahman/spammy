@@ -2,7 +2,7 @@
 # @Author: Tasdik Rahman
 # @Date:   2016-03-12
 # @Last Modified by:   Tasdik Rahman
-# @Last Modified time: 2016-04-12 14:24:54
+# @Last Modified time: 2016-04-12 16:02:24
 # @MIT License
 # @http://tasdikrahman.me
 # @https://github.com/prodicus
@@ -102,6 +102,8 @@ class Trainer(object):
 
     def train(self):
         """
+        Starts the training process on the directories passed by the user
+
         :param self: Trainer object
         """
         self.train_classifier(self.spamdir, 'spam')
@@ -113,12 +115,14 @@ class Trainer(object):
         """
         Will convert the document into tokens and extract the features.
 
-        Possible features
-        - Attachments
-        - Links in text
-        - CAPSLOCK words
-        - Numbers
-        - Words in text
+        .. note:: 
+
+            features looked for
+            - Attachments
+            - Links in text
+            - CAPSLOCK words
+            - Numbers
+            - Words in text
 
         So these are some possible features which would make an email a SPAM
 

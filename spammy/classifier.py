@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # @Author: Tasdik Rahman
 # @Date:   2016-03-12
-# @Last Modified by:   tasdik
-# @Last Modified time: 2016-04-11 21:52:41
+# @Last Modified by:   Tasdik Rahman
+# @Last Modified time: 2016-04-12 16:01:11
 # @MIT License
 # @http://tasdikrahman.me
 # @https://github.com/prodicus
@@ -90,7 +90,9 @@ class NaiveBayesClassifier(object):
         This function calculates the probability of a feature to belong to a
         particular label. (i.e class of 'spam' or 'ham' for us.)
 
-        #TO-DO
+        TO-DO
+        =====
+        
         for an unseen featurem I can assign a random probability, let's say
         0.5
 
