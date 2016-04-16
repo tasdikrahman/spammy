@@ -3,7 +3,7 @@ spammy
 
 |Pypi version| |Build Status| |Python Versions| |percentagecov| |Requirements Status| |License| 
 
-.. figure:: http://i.imgur.com/L8moQ2U.jpg
+.. figure:: http://i.imgur.com/W83tSal.png
     :alt:
 
 :Author: `Tasdik Rahman <http://tasdikrahman.me>`__
@@ -19,6 +19,8 @@ Overview
 --------
 
 `spammy <https://github.com/prodicus/spammy>`__ : Spam filtering at your service
+
+    `spammy <https://github.com/prodicus/spammy>`__ powers the web app https://plino.herokuapp.com
 
 Features
 --------
@@ -103,7 +105,12 @@ Example
     'spam'
     >>>
 
-**Accuracy of the classifier**
+
+.. figure:: http://i.imgur.com/L8moQ2U.jpg
+    :alt:
+
+Accuracy of the classifier
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code:: python
 
@@ -130,7 +137,7 @@ Installation
 .. figure:: http://hd.wallpaperswide.com/thumbs/shut_up_and_take_my_money-t2.jpg
     :alt:
 
-**NOTE**: Currently supports only ``python2``
+**NOTE**: spammy currently supports only ``python2``
 
 **Install the dependencies first**
 
@@ -145,7 +152,7 @@ To install use pip:
 
     $ pip install spammy
 
-or use easy_install
+or if you don't have ``pip``use ``easy_install``
 
 .. code:: bash
 
@@ -232,7 +239,7 @@ Roadmap
 ~~~~~~~
 
 - Include more algorithms for increased accuracy
-- python3 support
+- ``python3`` support
 
 Licensing
 ---------

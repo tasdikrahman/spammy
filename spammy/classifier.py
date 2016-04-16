@@ -2,7 +2,7 @@
 # @Author: Tasdik Rahman
 # @Date:   2016-03-12
 # @Last Modified by:   Tasdik Rahman
-# @Last Modified time: 2016-04-12 17:10:25
+# @Last Modified time: 2016-04-15 22:10:29
 # @MIT License
 # @http://tasdikrahman.me
 # @https://github.com/prodicus
@@ -163,12 +163,12 @@ class NaiveBayesClassifier(object):
 
     def classify(self, features):
         """
-        Writing the actual interface for the class here. Thi will classify our
+        Writing the actual interface for the class here. This will classify our
         documents when called from the terminal
 
         :param self: class object
         :param features: The feaures of the document passed
-        :returns: spam or ham **phew**
+        :returns: spam or ham
         :rtype: str
         """
 
@@ -185,7 +185,7 @@ class NaiveBayesClassifier(object):
                 reverse=True
             )[0][0]
         else:
-            return "Bad day bruh! No classification done! Come next time."
+            return "classification could not be done!"
 
     def __str__(self):
         """
@@ -194,9 +194,15 @@ class NaiveBayesClassifier(object):
         :param self: class object
         :returns: The spammy object with __str__ method overridden for verbosity
         """
-        return "No of Features : {feature}, \nNumber of spam email : {spam}, \nNumber of ham email : {ham}, \nTotal number of emails:  {total}".format(
+        result = \
+        "No of Features : {feature}, " \
+        "\nNumber of spam email : {spam}" \
+        "\nNumber of ham email : {ham}" \
+        "\nTotal number of emails:  {total}".format(
             feature=len(self.feature_count),
             spam=self.label_count['spam'],
             ham=self.label_count['ham'],
             total=self.total
         )
+
+        return result

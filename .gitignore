@@ -4,6 +4,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# UML diagrams
+design/
+
 # C extensions
 *.so
 
