@@ -6,6 +6,12 @@ spammy
 .. figure:: http://i.imgur.com/W83tSal.png
     :alt:
 
+If you have found my little bits of software of any use to you, you can help me pay my internet bills :)
+
+|Paypal badge|
+
+Some of my projects are also on `Gratipay <https://gratipay.com/~prodicus/>`__
+
 :Author: `Tasdik Rahman <http://tasdikrahman.me>`__
 :Latest version: 1.0.3
 
@@ -287,3 +293,5 @@ If you'd like give me credit somewhere on your blog or tweet a shout out to `@ta
 .. |Requirements Status| image:: https://requires.io/github/prodicus/spammy/requirements.svg?branch=master
      :target: https://requires.io/github/prodicus/spammy/requirements/?branch=master
      :alt: Requirements Status
+.. |Paypal badge| image:: https://tuxtricks.files.wordpress.com/2016/12/donate.png
+   :target: https://www.paypal.me/tasdikrahman
