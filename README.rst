@@ -8,7 +8,7 @@ spammy
 
 If you have found my little bits of software of any use to you, you can help me pay my internet bills :)
 
-|Paypal badge|
+|Paypal badge| |Instamojo|
 
 Some of my projects are also on `Gratipay <https://gratipay.com/~prodicus/>`__
 
@@ -295,3 +295,5 @@ If you'd like give me credit somewhere on your blog or tweet a shout out to `@ta
      :alt: Requirements Status
 .. |Paypal badge| image:: https://tuxtricks.files.wordpress.com/2016/12/donate.png
    :target: https://www.paypal.me/tasdikrahman
+.. |Instamojo| image:: https://www.instamojo.com/blog/wp-content/uploads/2017/01/instamojo-91.png
+   :target: https://www.instamojo.com/@tasdikrahman
