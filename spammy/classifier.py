@@ -5,7 +5,7 @@
 # @Last Modified time: 2016-04-15 22:10:29
 # @MIT License
 # @http://tasdikrahman.me
-# @https://github.com/prodicus
+# @https://github.com/tasdikrahman
 
 """
 Rolling my own Implementation of Naive Bayes algorithm.

@@ -5,7 +5,7 @@
 # @Last Modified time: 2016-04-12 16:54:10
 # @MIT License
 # @http://tasdikrahman.me
-# @https://github.com/prodicus
+# @https://github.com/tasdikrahman
 
 
 """

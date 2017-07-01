@@ -11,7 +11,7 @@ create a `virtualenv <http://pypi.python.org/pypi/virtualenv>`__
 
     $ virtualenv env              # Create virtual environment
     $ source env/bin/activate     # Change default python to virtual one
-    (env)$ git clone https://github.com/prodicus/spammy.git
+    (env)$ git clone https://github.com/tasdikrahman/spammy.git
     (env)$ cd spammy
     (env)$ pip install -r requirements.txt  # Install requirements for 'spammy' in virtual environment
 
@@ -22,7 +22,7 @@ Or, if ``virtualenv`` is not installed on your system:
     $ wget https://raw.github.com/pypa/virtualenv/master/virtualenv.py
     $ python virtualenv.py env    # Create virtual environment
     $ source env/bin/activate     # Change default python to virtual one
-    (env)$ git clone https://github.com/prodicus/spammy.git
+    (env)$ git clone https://github.com/tasdikrahman/spammy.git
     (env)$ cd spammy
     (env)$ pip install -r requirements.txt  # Install requirements for 'spammy' in virtual environment
 

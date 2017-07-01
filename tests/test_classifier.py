@@ -5,7 +5,7 @@
 # @Last Modified time: 2016-04-12 14:31:45
 # @GPLv3 License
 # @http://tasdikrahman.me
-# @https://github.com/prodicus
+# @https://github.com/tasdikrahman
 
 
 HAM_TEXT_2= \

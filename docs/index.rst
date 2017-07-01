@@ -21,7 +21,7 @@ spammy
 Overview
 --------
 
-`spammy <https://github.com/prodicus/spammy>`__ : Spam filtering at your service
+`spammy <https://github.com/tasdikrahman/spammy>`__ : Spam filtering at your service
 
 Features
 --------
@@ -98,7 +98,7 @@ Example
     0.9033333333333333
     >>> 
 
-**More examples can be found over in the `examples directory <https://github.com/prodicus/spammy/tree/master/examples>`__ **
+**More examples can be found over in the `examples directory <https://github.com/tasdikrahman/spammy/tree/master/examples>`__ **
 
 Installation
 ------------
@@ -131,7 +131,7 @@ Or build it yourself (only if you must):
 
 .. code:: bash
 
-    $ git clone https://github.com/prodicus/spammy.git
+    $ git clone https://github.com/tasdikrahman/spammy.git
     $ python setup.py install
 
 Upgrading
@@ -201,7 +201,7 @@ Contributing
 ------------
 `[back to top] <#overview>`__
 
-Refer `CONTRIBUTING <https://github.com/prodicus/spammy/tree/master/CONTRIBUTING.rst>`__ page for details
+Refer `CONTRIBUTING <https://github.com/tasdikrahman/spammy/tree/master/CONTRIBUTING.rst>`__ page for details
 
 Roadmap
 ~~~~~~~
@@ -230,7 +230,7 @@ Spammy is built by `Tasdik Rahman <http://tasdikrahman.me>`__ and licensed under
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-You can find a full copy of the LICENSE file `here <https://github.com/prodicus/spammy/tree/master/LICENSE.txt>`__
+You can find a full copy of the LICENSE file `here <https://github.com/tasdikrahman/spammy/tree/master/LICENSE.txt>`__
 
 Credits
 -------
@@ -241,16 +241,16 @@ If you'd like give me credit somewhere on your blog or tweet a shout out to `@ta
 
 .. |PyPI version| image:: https://img.shields.io/pypi/v/spammy.svg
    :target: https://pypi.python.org/pypi/spammy
-.. |Build Status| image:: https://travis-ci.org/prodicus/spammy.svg?branch=master
-    :target: https://travis-ci.org/prodicus/spammy
+.. |Build Status| image:: https://travis-ci.org/tasdikrahman/spammy.svg?branch=master
+    :target: https://travis-ci.org/tasdikrahman/spammy
 .. |License| image:: https://img.shields.io/pypi/l/spammy.svg
    :target: https://pypi.python.org/pypi/spammys
 .. |grade| image:: https://api.codacy.com/project/badge/grade/c61c09b6c4ca4580b1f24c03ce3ad8e2
     :target: https://www.codacy.com/app/tasdik95/spammy
 .. |percentagecov| image:: https://api.codacy.com/project/badge/coverage/e2cb32eae16242f795f498d40d0d8984
     :target: https://www.codacy.com/app/tasdik95/spammy
-.. |Requirements Status| image:: https://requires.io/github/prodicus/spammy/requirements.svg?branch=master
-     :target: https://requires.io/github/prodicus/spammy/requirements/?branch=master
+.. |Requirements Status| image:: https://requires.io/github/tasdikrahman/spammy/requirements.svg?branch=master
+     :target: https://requires.io/github/tasdikrahman/spammy/requirements/?branch=master
      :alt: Requirements Status
 
 Documentation

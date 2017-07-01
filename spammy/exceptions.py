@@ -5,7 +5,7 @@
 # @Last Modified time: 2016-04-11 23:02:20
 # @GPLv3 License
 # @http://tasdikrahman.me
-# @https://github.com/prodicus
+# @https://github.com/tasdikrahman
 
 
 class SpammyError(Exception):

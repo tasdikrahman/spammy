@@ -5,7 +5,7 @@
 # @Last Modified time: 2016-04-12 17:07:33
 # @GPLv3 License
 # @http://tasdikrahman.me
-# @https://github.com/prodicus
+# @https://github.com/tasdikrahman
 
 from __future__ import absolute_import, division
 import os

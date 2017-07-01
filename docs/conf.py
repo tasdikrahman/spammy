@@ -24,7 +24,7 @@ extensions = [
 primary_domain = 'py'
 default_role = 'py:obj'
 
-issues_github_path = 'prodicus/spammy'
+issues_github_path = 'tasdikrahman/spammy'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

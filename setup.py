@@ -23,8 +23,8 @@ setup(
     version=__version__,
     description='spammy: Spam filtering at your service',
     long_description=long_description,
-    url='https://github.com/prodicus/spammy',
-    download_url='https://github.com/prodicus/spammy/tarball/' + __version__,
+    url='https://github.com/tasdikrahman/spammy',
+    download_url='https://github.com/tasdikrahman/spammy/tarball/' + __version__,
     license='GPLv3',
     classifiers=[
       'Development Status :: 3 - Alpha',
