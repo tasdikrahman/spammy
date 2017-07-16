@@ -6,12 +6,6 @@ spammy
 .. figure:: http://i.imgur.com/W83tSal.png
     :alt:
 
-If you have found my little bits of software of any use to you, you can help me pay my internet bills :)
-
-|Paypal badge| |Instamojo|
-
-Some of my projects are also on `Gratipay <https://gratipay.com/~tasdikrahman/>`__
-
 :Author: `Tasdik Rahman <http://tasdikrahman.me>`__
 :Latest version: 1.0.3
 
@@ -277,6 +271,18 @@ Credits
 
 If you'd like give me credit somewhere on your blog or tweet a shout out to `@tasdikrahman <https://twitter.com/tasdikrahman>`__, well hey, I'll take it.
 
+Donation
+--------
+
+If you have found my little bits of software of any use to you, you can help me pay my internet bills :)
+
+|Paypal badge|
+
+|Instamojo|
+
+|gratipay|
+
+|patreon|
 
 .. |PyPI version| image:: https://img.shields.io/pypi/v/spammy.svg
    :target: https://pypi.python.org/pypi/spammy
@@ -293,7 +299,12 @@ If you'd like give me credit somewhere on your blog or tweet a shout out to `@ta
 .. |Requirements Status| image:: https://requires.io/github/tasdikrahman/spammy/requirements.svg?branch=master
      :target: https://requires.io/github/tasdikrahman/spammy/requirements/?branch=master
      :alt: Requirements Status
-.. |Paypal badge| image:: https://tuxtricks.files.wordpress.com/2016/12/donate.png
-   :target: https://www.paypal.me/tasdikrahman
-.. |Instamojo| image:: https://www.instamojo.com/blog/wp-content/uploads/2017/01/instamojo-91.png
+.. |Paypal badge| image:: https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg
+   :target: https://www.paypal.me/tasdik
+.. |gratipay| image:: https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png
+   :target: https://gratipay.com/tasdikrahman/
+.. |Instamojo| image:: https://www.soldermall.com/images/pic-online-payment.jpg
    :target: https://www.instamojo.com/@tasdikrahman
+.. |patreon| image:: http://i.imgur.com/ICWPFOs.png
+   :target: https://www.patreon.com/tasdikrahman/
+
